@@ -1,0 +1,38 @@
+<select name="country" [(ngModel)]="selectedCountry">
+  <option [value]="null" disabled selected>Please select country</option>
+  <option [value]="c" *ngFor="let c of countries">{{c}}</option>
+</select>
+<h1>{{selectedCountry}}</h1>
+<h1 *ngIf="!selectedCountry">Please select country</h1>
+<br>
+<span *ngFor="let tech of technologies">
+  <input type="checkbox" name="technology" [value]="tech" (change)="selectTechnology($event)">{{tech}}
+</span>
+
+<h1 *ngFor="let t of selectedTechnologies">{{t}}</h1>
+<br>
+
+<input type="radio" name="gen" value="female" [(ngModel)]="selectedGender">:Female 
+<input type="radio" name="gen" value="male" [(ngModel)]="selectedGender">:Male
+<input type="radio" name="gen" value="other" [(ngModel)]="selectedGender">:Others
+
+<h1>{{selectedGender}}</h1>
+
+<h1 *ngIf="selectedGender===''">Please select the Gender</h1>
+
+<h1 [class]="cl?'bluebg':'redbg'">Hello Edupoly</h1>
+{{title}}
+{{a+b}}
+{{title.toUpperCase()}}
+{{a>b}}
+<button (click)="abc()">lets Events in Angular</button>
+<br>
+<input type="text" [(ngModel)]="title">
+<h1>{{students[0]}}</h1>
+<h1>{{students[1]}}</h1>
+<h1>{{students[2]}}</h1>
+<h1>{{students[3]}}</h1>
+
+<ul>
+  <li *ngFor="let s of students">{{s}}</li>
+</ul>
