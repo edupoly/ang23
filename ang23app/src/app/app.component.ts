@@ -7,36 +7,6 @@ import { Component } from '@angular/core';
 })
 export class AppComponent {
 
-  selectedGender:string="";
-  selectedCountry:string='';
-  selectedTechnologies:string[]=[];
-
-  technologies = ['nodejs','angular','reactjs','bootstrap','java','python'];
-  countries = ['india','pakistan','srilanka','japan'];
-
-  title = 'ang23app';
-  a=100;
-  b=200;
-  cl=true;
-  students = ['anji','satya','deepti','lavanya']
-  abc(){
-    alert('hello')
-  }
-  constructor(){
-    setInterval(()=>{
-      this.cl=!this.cl;
-    },1000)
-  }
-  selectTechnology(e:any){
-    if(e.target.checked){
-      this.selectedTechnologies.push(e.target.value)
-    }
-    else{
-      var i = this.selectedTechnologies.indexOf(e.target.value);
-      this.selectedTechnologies.splice(i,1)
-    }
-    console.log(this.selectedTechnologies)
-  }
 }
 
 /*
